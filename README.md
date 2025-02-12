@@ -4,7 +4,7 @@
 
 base class: cta
 
-state class: [cta-solid-on OR cta-outline-on] -  [dark OR light OR primary]
+state class: \[cta-solid-on || cta-outline-on\]  -  \[dark || light || primary\]
 
 example:
 
