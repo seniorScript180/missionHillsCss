@@ -1,3 +1,17 @@
+/* Variables */
+.cta {
+    --primary: #007bff;
+    --primary-dark: #0056b3;
+    --dark: #343a40;
+    --white: #ffffff;
+    --transparent: transparent;
+    --cta-border-color: #007bff;
+    --cta-text-color: #ffffff;
+    --cta-hover-bg: #ffffff;
+    --cta-hover-text-color: #343a40;
+    --transition-base: 0.3s ease;
+}
+
 /* Base Class */
 .cta {
     position: relative;

@@ -1,114 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CTA Button Example</title>
     <style>
-        /* Base Class */
-        .cta {
-            position: relative;
-            display: inline-block;
-            padding: .375rem 1.25rem;
-            font-size: 1.25rem;
-            line-height: 2.125;
-            font-weight: 500;
-            text-align: center;
-            text-transform: uppercase;
-            text-decoration: none;
-            border: 0.125rem solid var(--cta-border-color, var(--primary)); /* default border */
-            border-radius: var(--cta-border-radius, 0px); /* default radius */
-            cursor: pointer;
-            transition: background-color var(--transition-base), border-color var(--transition-base);
-        }
+      .test-section,
+      .cta {
+        --primary: #00afd7;
+        --primary-dark: #004f71;
+        --transparent: rgba(255, 255, 255, 0);
+        --white: #fff;
+        --dark-gray: #4b4f54;
+        --dark: #1d252d;
+        --transition-base: 0.3s ease-in-out 0s;
+      }
 
-        /* Solid Class Variations */
-        .cta-solid-on-dark {
-            color: var(--white);
-            background-color: var(--primary);
-        }
+      /* Base Class */
+      .cta {
+        position: relative;
+        display: inline-block;
+        padding: 0.375rem 1.25rem;
+        font-style: normal;
+        font-size: 1.25rem;
+        line-height: 2.125;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 0.125rem solid;
+        border-color: inherit;
+        border-radius: 0px;
+        cursor: pointer;
+        transition: all var(--transition-base);
+      }
 
-        .cta-solid-on-dark:hover {
-            color: var(--dark);
-            background-color: var(--white);
-            border-color: var(--primary);
-        }
+      /* State Classes */
+      .cta-solid-on-dark {
+        color: var(--white);
+        background-color: var(--primary);
+      }
 
-        .cta-solid-on-primary {
-            color: var(--white);
-            background-color: var(--primary-dark);
-        }
+      .cta-solid-on-dark:hover {
+        color: var(--dark);
+        background-color: var(--white);
+        border-color: var(--primary);
+      }
 
-        .cta-solid-on-primary:hover {
-            color: var(--dark);
-            background-color: var(--white);
-            border-color: var(--white);
-        }
+      .cta-solid-on-primary {
+        color: var(--white);
+        background-color: var(--primary-dark);
+      }
 
-        .cta-solid-on-light {
-            color: var(--white);
-            background-color: var(--primary);
-            border-color: var(--dark);
-        }
+      .cta-solid-on-primary:hover {
+        color: var(--dark);
+        background-color: var(--white);
+        border-color: var(--white);
+      }
 
-        .cta-solid-on-light:hover {
-            color: var(--dark);
-            background-color: var(--white);
-            border-color: var(--primary);
-        }
+      .cta-solid-on-light {
+        color: var(--white);
+        background-color: var(--primary);
+        border-color: var(--dark);
+      }
 
-        /* Outline Class Variations */
-        .cta-outline {
-            color: var(--cta-text-color, var(--white));
-            background-color: var(--transparent);
-            border-color: var(--cta-border-color, var(--primary));
-        }
+      .cta-solid-on-light:hover {
+        color: var(--dark);
+        background-color: var(--white);
+        border-color: var(--primary);
+      }
 
-        .cta-outline-on-dark:hover,
-        .cta-outline-on-primary:hover,
-        .cta-outline-on-light:hover {
-            background-color: var(--cta-hover-bg, var(--primary));
-            color: var(--cta-hover-text-color, var(--dark));
-        }
+      /* CTA Outline */
+      .cta-outline-on-dark {
+        color: var(--white);
+        background-color: var(--transparent);
+      }
 
-        .cta-outline-on-dark:hover {
-            border-color: var(--primary);
-        }
+      .cta-outline-on-dark:hover {
+        background-color: var(--primary);
+      }
 
-        .cta-outline-on-primary:hover {
-            color: var(--dark);
-            border-color: var(--white);
-        }
+      .cta-outline-on-primary {
+        color: var(--white);
+        background-color: var(--transparent);
+      }
 
-        .cta-outline-on-light:hover {
-            color: var(--white);
-            border-color: var(--primary);
-        }
+      .cta-outline-on-primary:hover {
+        color: var(--dark);
+      }
 
-        /* Example variables for demonstration */
-        :root {
-            --primary: #007bff;
-            --primary-dark: #0056b3;
-            --dark: #343a40;
-            --white: #ffffff;
-            --transparent: transparent;
-            --cta-border-color: #007bff;
-            --cta-text-color: #ffffff;
-            --cta-hover-bg: #ffffff;
-            --cta-hover-text-color: #343a40;
-            --transition-base: 0.3s ease;
-        }
+      .cta-outline-on-light {
+        color: var(--dark);
+        background-color: var(--transparent);
+      }
+
+      .cta-outline-on-light:hover {
+        color: var(--white);
+        background-color: var(--primary);
+      }
+
+      /* styles below are only for presentation */
+      .test-section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 1rem;
+        padding: 3rem;
+      }
+      .bg-primary {
+        background-color: var(--primary);
+      }
+      .bg-dark {
+        background-color: var(--dark);
+      }
+      .bg-white {
+        background-color: var(--white);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body cz-shortcut-listen="true">
+    <div class="test-section bg-dark">
+      <a class="cta cta-solid-on-dark" href="">Secondary CTA</a>
+      <a class="cta cta-outline-on-dark" href="">Secondary CTA</a>
+    </div>
 
-    <!-- Call-to-Action Buttons -->
-    <a href="#" class="cta cta-solid-on-dark">Solid Dark</a>
-    <a href="#" class="cta cta-solid-on-primary">Solid Primary</a>
-    <a href="#" class="cta cta-solid-on-light">Solid Light</a>
-    <a href="#" class="cta cta-outline cta-outline-on-dark">Outline Dark</a>
-    <a href="#" class="cta cta-outline cta-outline-on-primary">Outline Primary</a>
-    <a href="#" class="cta cta-outline cta-outline-on-light">Outline Light</a>
+    <div class="test-section bg-primary">
+      <a class="cta cta-solid-on-primary" href="">Secondary CTA</a>
+      <a class="cta cta-outline-on-primary" href="">Secondary CTA</a>
+    </div>
 
-</body>
+    <div class="test-section bg-white">
+      <a class="cta cta-solid-on-light" href="">Secondary CTA</a>
+      <a class="cta cta-outline-on-light" href="">Secondary CTA</a>
+    </div>
+  </body>
 </html>
