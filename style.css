@@ -1,15 +1,12 @@
 /* Variables */
 .cta {
-    --primary: #007bff;
-    --primary-dark: #0056b3;
-    --dark: #343a40;
-    --white: #ffffff;
-    --transparent: transparent;
-    --cta-border-color: #007bff;
-    --cta-text-color: #ffffff;
-    --cta-hover-bg: #ffffff;
-    --cta-hover-text-color: #343a40;
-    --transition-base: 0.3s ease;
+    --primary: #00afd7;
+    --primary-dark: #004f71;
+    --transparent: rgba(255, 255, 255, 0);
+    --white: #fff;
+    --dark-gray: #4b4f54;
+    --dark: #1d252d;
+    --transition-base: 0.3s ease-in-out 0s;
 }
 
 /* Base Class */
