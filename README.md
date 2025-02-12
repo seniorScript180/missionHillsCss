@@ -1,4 +1,4 @@
-# CTA CSS classes
+# CTA css classes
 
 ## How to use:
 
