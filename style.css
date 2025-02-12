@@ -1,0 +1,83 @@
+/* Base Class */
+.cta {
+    position: relative;
+    display: inline-block;
+    padding: .375rem 1.25rem;
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 2.125;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.125rem solid;
+    border-color: inherit;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+/* State Classes */
+.cta-solid-on-dark {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.cta-solid-on-dark:hover {
+    color: var(--dark);
+    background-color: var(--white);
+    border-color: var(--primary);
+}
+
+.cta-solid-on-primary {
+    color: var(--white);
+    background-color: var(--primary-dark);
+}
+
+.cta-solid-on-primary:hover {
+    color: var(--dark);
+    background-color: var(--white);
+    border-color: var(--white);
+}
+
+.cta-solid-on-light {
+    color: var(--white);
+    background-color: var(--primary);
+    border-color: var(--dark);
+}
+
+.cta-solid-on-light:hover {
+    color: var(--dark);
+    background-color: var(--white);
+    border-color: var(--primary);
+}
+
+
+/* CTA Outline */
+.cta-outline-on-dark {
+    color: var(--white);
+    background-color: var(--transparent);
+}
+
+.cta-outline-on-dark:hover {
+    background-color: var(--primary);
+}
+
+.cta-outline-on-primary {
+    color: var(--white);
+    background-color: var(--transparent);
+}
+
+.cta-outline-on-primary:hover {
+    color: var(--dark);
+}
+
+.cta-outline-on-light {
+    color: var(--dark);
+    background-color: var(--transparent);
+}
+
+.cta-outline-on-light:hover {
+    color: var(--white);
+    background-color: var(--primary);
+}
